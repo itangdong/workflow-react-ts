@@ -1,0 +1,38 @@
+.page-wrap{
+  overflow: auto;
+  background-color: #f0f2f5;
+  width: 100vw;
+  height: 100vh;
+  .header-operate{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    padding: 8px;
+  }
+  .workflow-wrap {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+    padding-top: 30px;
+    .start-flag{
+      margin-bottom: 20px;
+    }
+    .last-node-box-wrap{
+      .last-node-box-circle{
+        width: 10px;
+        height: 10px;
+        margin: auto;
+        border-radius: 50%;
+        background: #dbdcdc;
+      }
+      .last-node-box-text{
+        margin-top: 5px;
+        text-align: center;
+      }
+    }
+  }
+}
+
