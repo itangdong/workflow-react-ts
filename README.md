@@ -7,6 +7,6 @@
 `!!!`TS中使用了许多any，和可以优化的地方，没错，我故意的：）
 
 ### 效果图：
-<img src="./src/assets/images/spl.png" />
+<img src="./src/assets/images/spl.png" crossorigin="anonymous" />
 
 
