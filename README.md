@@ -7,7 +7,7 @@
 `!!!`项目中有一些可以优化的地方，没错，我故意的：）
 
 ### 在线地址
-[审批流]https://itangdong.github.io/
+[审批流](https://itangdong.github.io/)
 
 ### 效果图：
 <img src="./src/assets/images/spl.png" crossorigin="anonymous" />
