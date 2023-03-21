@@ -54,6 +54,10 @@ const NodeBox = ({ currentData, dataSource, onSetDataSource }: any) => {
       if (item.childNode && flag) {
         removeConditionNodeFn([item.childNode], id);
       }
+      // 需要删除的条件节点，可能在条件节点下
+      if (item.conditionNodes?.length && flag) {
+        removeConditionNodeFn(item.conditionNodes, id);
+      }
     });
     return arr;
   };
@@ -64,8 +68,9 @@ const NodeBox = ({ currentData, dataSource, onSetDataSource }: any) => {
     const addConditionFn = (arr: any, id: number) => {
       arr.forEach((item: any) => {
         // 找到对应路由节点
+        console.log(item.nodeId)
         if (item.nodeId === id) {
-          item.conditionNodes.push({
+          return item.conditionNodes.push({
             nodeName: '条件N',
             type: 3,
             nodeId: +new Date(),
@@ -74,8 +79,13 @@ const NodeBox = ({ currentData, dataSource, onSetDataSource }: any) => {
             conditionNodes: [],
             childNode: null,
           });
-        } else if (item.childNode) {
+        } 
+        if (item.childNode) {
           addConditionFn([item.childNode], id);
+        }
+        // 条件节点下可能直接还是条件节点
+        if (item.conditionNodes?.length) {
+          addConditionFn(item.conditionNodes, id);
         }
       });
       return arr;
